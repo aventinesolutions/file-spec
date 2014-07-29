@@ -14,21 +14,21 @@ module RSpec::FileMatchers
       end
 
       it "should not have symlink files" do
-        nil.should_not have_symlinks sym_test_files
+        expect(nil).to_not have_symlinks sym_test_files
       end
 
       it "should have symlink files" do
         make_test_symlink_files
-        nil.should have_symlinks sym_test_files
+        expect(nil).to have_symlinks sym_test_files
       end
 
       it "should not have symlink dirs" do
-        nil.should_not have_symlink_dirs sym_test_dirs
+        expect(nil).to_not have_symlink_dirs sym_test_dirs
       end
 
       it "should have symlink dirs" do
         make_test_symlink_dirs
-        nil.should have_symlink_dirs sym_test_dirs
+        expect(nil).to have_symlink_dirs sym_test_dirs
       end
     end
   end

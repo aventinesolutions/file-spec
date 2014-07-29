@@ -14,12 +14,12 @@ module RSpec::FileMatchers
       end
 
       it "should have file" do
-        nil.should_not have_file test_file
+        expect(nil).to_not have_file test_file
       end
 
       it "should have file" do
         make_test_file
-        nil.should have_file test_file
+        expect(nil).to have_file test_file
       end
     end
   end

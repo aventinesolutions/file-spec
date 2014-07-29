@@ -1,3 +1,5 @@
+test
+
 ## MAC OS
 .DS_Store
 
@@ -12,6 +14,9 @@ tmtags
 
 ## VIM
 *.swp
+
+## Jet Brains
+.idea
 
 ## PROJECT::GENERAL
 coverage

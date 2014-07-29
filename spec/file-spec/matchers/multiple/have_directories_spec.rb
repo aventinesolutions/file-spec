@@ -14,23 +14,23 @@ module RSpec::FileMatchers
       end
 
       it "should not have 'test' dirs" do
-        nil.should_not have_dirs test_dirs
+        expect(nil).to_not have_dirs test_dirs
       end
 
       it "should have 'test' dirs" do
         make_test_dirs
-        nil.should have_dirs test_dirs
+        expect(nil).to have_dirs test_dirs
       end
 
       it "should have 'test' dirs in the current dir" do
         make_test_dirs
-        Dir.pwd.should have_dirs test_dirs
+        expect(Dir.pwd).to have_dirs test_dirs
       end
 
       it "should have 'test' dirs in the current Dir" do
         make_test_dirs 
         dir = Dir.new(Dir.pwd)
-        dir.should have_dirs test_dirs
+        expect(dir).to have_dirs test_dirs
       end
     end
   end
